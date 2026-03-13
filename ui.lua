@@ -1,5 +1,3 @@
---- START OF FILE text/plain ---
-
 -- Services 
 local InputService  = game:GetService("UserInputService")
 local HttpService   = game:GetService("HttpService")
