@@ -1,3 +1,5 @@
+--- START OF FILE text/plain ---
+
 -- Services 
 local InputService  = game:GetService("UserInputService")
 local HttpService   = game:GetService("HttpService")
@@ -226,9 +228,9 @@ function StackHub:Window(properties)
     })
     StackHub:Themify(SidebarLine, "outline", "BackgroundColor3")
     StackHub:Create("UIGradient", {
-        Parent = SidebarLine, Rotation = 90, Transparency = ColorSequence.new({
-            ColorSequenceKeypoint.new(0, 1), ColorSequenceKeypoint.new(0.2, 0),
-            ColorSequenceKeypoint.new(0.8, 0), ColorSequenceKeypoint.new(1, 1)
+        Parent = SidebarLine, Rotation = 90, Transparency = NumberSequence.new({
+            NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.2, 0),
+            NumberSequenceKeypoint.new(0.8, 0), NumberSequenceKeypoint.new(1, 1)
         })
     })
 
@@ -592,7 +594,7 @@ function StackHub:Button(properties)
     StackHub:Create("UIGradient", {
         Parent = Items.Button, Rotation = 90,
         Color = ColorSequence.new({ColorSequenceKeypoint.new(0, rgb(255,255,255)), ColorSequenceKeypoint.new(1, rgb(180,180,180))}),
-        Transparency = ColorSequence.new({ColorSequenceKeypoint.new(0, 0.95), ColorSequenceKeypoint.new(1, 1)})
+        Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0.95), NumberSequenceKeypoint.new(1, 1)})
     })
 
     StackHub:AddHover(Items.Button, themes.preset.element_hover, themes.preset.element)
